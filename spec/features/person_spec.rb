@@ -5,6 +5,11 @@ feature 'Manage People' do
     visit '/'
     expect(page).to have_content 'Welcome'
     click_on 'Add a Person'
+    click_on 'Sign up'
+    fill_in 'Email', with: 'peggy@example.com'
+    fill_in 'Password', with: 12345678
+    fill_in 'Password confirmation', with: 12345678
+    click_on 'Sign up'
     fill_in 'Name', with: 'Arya'
     fill_in 'Description', with: 'feisty'
     click_on 'Create Person'
@@ -15,6 +20,11 @@ feature 'Manage People' do
   scenario 'User can view individual from list of people' do
     visit '/'
     click_on 'Add a Person'
+    click_on 'Sign up'
+    fill_in 'Email', with: 'peggy@example.com'
+    fill_in 'Password', with: 12345678
+    fill_in 'Password confirmation', with: 12345678
+    click_on 'Sign up'
     fill_in 'Name', with: 'Arya'
     fill_in 'Description', with: 'feisty'
     click_on 'Create Person'
@@ -28,6 +38,11 @@ feature 'Manage People' do
   scenario 'User can edit and update list of people' do
     visit '/'
     click_on 'Add a Person'
+    click_on 'Sign up'
+    fill_in 'Email', with: 'peggy@example.com'
+    fill_in 'Password', with: 12345678
+    fill_in 'Password confirmation', with: 12345678
+    click_on 'Sign up'
     fill_in 'Name', with: 'Arya'
     fill_in 'Description', with: 'feisty'
     click_on 'Create Person'
@@ -46,6 +61,11 @@ feature 'Manage People' do
   scenario 'User can delete person from list' do
     visit '/'
     click_on 'Add a Person'
+    click_on 'Sign up'
+    fill_in 'Email', with: 'peggy@example.com'
+    fill_in 'Password', with: 12345678
+    fill_in 'Password confirmation', with: 12345678
+    click_on 'Sign up'
     fill_in 'Name', with: 'Arya'
     fill_in 'Description', with: 'feisty'
     click_on 'Create Person'
