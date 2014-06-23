@@ -55,4 +55,5 @@ feature 'Manage People' do
     fill_in 'Name', with: 'Jon Snow'
     fill_in 'Description', with: 'valiant'
     click_on 'Update'
+  end
 end
