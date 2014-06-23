@@ -52,8 +52,7 @@ feature 'Manage People' do
     expect(page).to have_content 'Arya'
     expect(page).to have_content 'feisty'
     click_on 'Delete'
-    fill_in 'Name', with: 'Jon Snow'
-    fill_in 'Description', with: 'valiant'
-    click_on 'Update'
+    expect(page).to have_no_content 'Arya'
+    expect(page).to have_no_content 'feisty'
   end
 end
