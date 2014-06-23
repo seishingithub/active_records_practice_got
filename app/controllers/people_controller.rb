@@ -17,9 +17,9 @@ class PeopleController < ApplicationController
     end
   end
 
-  #def show
-  #  @person = Person.find(params[:id])
-  #end
+  def show
+    @person = Person.find(params[:id])
+  end
 
   private
   def person_parameters
