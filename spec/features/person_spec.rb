@@ -42,4 +42,17 @@ feature 'Manage People' do
     expect(page).to have_no_content 'Arya'
     expect(page).to have_no_content 'feisty'
   end
+
+  scenario 'User can delete person from list' do
+    visit '/'
+    click_on 'Add a Person'
+    fill_in 'Name', with: 'Arya'
+    fill_in 'Description', with: 'feisty'
+    click_on 'Create Person'
+    expect(page).to have_content 'Arya'
+    expect(page).to have_content 'feisty'
+    click_on 'Delete'
+    fill_in 'Name', with: 'Jon Snow'
+    fill_in 'Description', with: 'valiant'
+    click_on 'Update'
 end
